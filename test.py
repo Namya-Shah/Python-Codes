@@ -1,4 +1,7 @@
-celsius = int(input("Enter temperature in celsius."))
+nums = [1,2,3,4,5]
 
-fahrenheit = (celsius*1.8) + 32
-print("%0.1f Celsius is equal to %0.1f degree Fahrenheit"%(celsius,fahrenheit))
+for num in nums:
+    if num == 3:
+        print("I found it!")
+        continue
+    print(num)
