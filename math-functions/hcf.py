@@ -1,3 +1,4 @@
+#Python program to find HCF of any given two numbers
 def calculate_hcf(x,y):
     if x>y:
         smaller = y

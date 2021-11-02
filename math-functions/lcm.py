@@ -1,3 +1,4 @@
+#Python program to find LCM of any given two numbers
 def calculate_lcm(x,y):
     if x>y:
         greater = x
