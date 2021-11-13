@@ -52,6 +52,5 @@
 
 ### Bots
 - Telegram Bot
-    - constants.py
     - main.py
     - responses.py
