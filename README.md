@@ -49,8 +49,15 @@
 
 ### Projects
 - HNews_Aggregator.py
+- dice_simulator.py
+- rock_paper_scissor.py
 
 ### Bots
 - Telegram Bot
     - main.py
     - responses.py
+
+### My Projects
+- area_calculator.py
+- all_in_one_calculator.py
+- qrcode.py
