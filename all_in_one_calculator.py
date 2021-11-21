@@ -21,7 +21,8 @@ print("18. Pressure")
 print("19. Torque")
 print("20. Ohm's Law")
 print("21. Cummulative Annual Growth Rate")
-choice = input("What do you want to use (1/21)? ")
+print("22. Quadratic Equation Solver")
+choice = input("What do you want to use (1/22)? ")
 
 # 1. Calculator
 if choice == '1':
@@ -583,5 +584,16 @@ elif choice == '21':
     r = ((fv/pv)**(1/n)) - 1
     print("Your CAGR is", r)
 
+elif choice == '22':
+    import cmath
+    a = float(input("Enter a:"))
+    b = float(input("Enter b:"))
+    c = float(input("Enter c:"))
+
+    d = (b**2)-(4*a*c)
+
+    sol1 = (-b-cmath.sqrt(d))/(2*a)
+    sol2 = (-b+cmath.sqrt(d))/(2*a)
+    print('The solution are {0} and {1}'.format(sol1,sol2))
 else:
     print("You have entered incorrect choice.")
