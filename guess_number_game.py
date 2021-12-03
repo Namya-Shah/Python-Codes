@@ -1,20 +1,13 @@
 import random
-import tkinter as tk
+number = random.randrange(1,100)
+guess = int(input("Guess a number between 1 and 100: "))
 
-a = tk.Title('Number Guessing Game')
+while guess != number:
+    if guess < number:
+        print("You need to guess higher. Try Again!")
+        guess = int(input("\nGuess a number between 1 and 100: "))
+    elif guess > number:
+        print("You need to guess lower. Try again")
+        guess = int(input("\nGuess a number between 1 and 100: "))
 
-u = random.randint(1,100)
-
-i = int(input("Guess the number: "))
-
-while i != u:
-    if i > u:
-        print("You have entered a high number.")
-        i = int(input("Guess again: "))
-    elif i < u:
-        print("You have entered a low number.")
-        i = int(input("Guess again: "))
-    elif i == u:
-        print("You have entered correct choice.")
-    
-print("The number was", u)
+print("You did it!")
