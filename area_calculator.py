@@ -1,3 +1,4 @@
+# importing math library to add support for math functions
 import math
 print("Area Calculator")
 print("1. 2D Shapes")

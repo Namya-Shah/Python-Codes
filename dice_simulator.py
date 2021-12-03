@@ -1,3 +1,4 @@
+# importing random library to generate random number
 import random
 
 while True:
