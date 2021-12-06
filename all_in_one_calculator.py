@@ -604,5 +604,29 @@ elif choice == '23':
     y = int(input("Enter power: "))
     print("{} to the power of {}".format(x,y),"is",pow(x,y))
 
+elif choice == '24':
+    print("Which side you wish to find: ")
+    print("1. Hypotenuse")
+    print("2. Base")
+    print("3. Perpendicular Height")
+    option = input("What is your choice: ")
+    if option == '1':
+        x = int(input("Enter base length: "))
+        y = int(input("Enter perpendicular height: "))
+        z = math.sqrt(x**2 + y**2)
+        print("Length of hypotenuse", z)
+    elif option == '2':
+        x = int(input("Enter hypotenuse length: "))
+        y = int(input("Enter perpendicular height: "))
+        z = math.sqrt(x**2 - y**2)
+        print("Length of base", z)
+    elif option == '3':
+        x = int(input("Enter hypotenuse length: "))
+        y = int(input("Enter base length: "))
+        z = math.sqrt(x**2 - y**2)
+        print("Length of perpendicular height", z)
+    else:
+        print("You have entered a incorrect choice")
+
 else:
     print("You have entered incorrect choice.")
