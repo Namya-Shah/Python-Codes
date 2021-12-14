@@ -1,3 +1,3 @@
 a = input("Enter your name: ")
 
-print()
+print(len(a))
