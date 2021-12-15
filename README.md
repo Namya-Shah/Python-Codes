@@ -59,3 +59,7 @@
 - Telegram Bot
     - main.py
     - responses.py
+
+### 100 Days of Code
+- This is a course by Angela Yu in Udemy
+- I have done all the coding exercises in my way
