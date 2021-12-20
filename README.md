@@ -2,10 +2,11 @@
 
 ## FILES INSIDE
 ### BASIC FUNCTIONS
-- ASCII.py
 - append.py
+- ASCII.py
 - calendar_month.py
 - compare_two_lists.py
+- defining_function.py
 - dict.py
 - helloworld.py
 - insert.py
@@ -48,17 +49,22 @@
 - transpose_matrix.py
 
 ### Projects
-- HNews_Aggregator.py
-- dice_simulator.py
-- rock_paper_scissor.py
-- area_calculator.py
 - all_in_one_calculator.py
-- qrcode.py
-
+- area_calculator.py
+- car_game.py
+- dice_simulator.py
+- finance_calculator.py
+- guess_number_game.py
+- HNews_Aggregator.py
+- rock_paper_scissor.py
+- whatsapp.py
 ### Bots
 - Telegram Bot
     - main.py
     - responses.py
+- Twitter Bot
+    - chromedriver
+    - TwitterBot.py
 
 ### 100 Days of Code
 - This is a course by Angela Yu in Udemy
