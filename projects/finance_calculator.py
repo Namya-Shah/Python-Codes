@@ -9,6 +9,8 @@ print("1. Compound Interest Calculator")
 print("2. VAT Calculator")
 print("3. Simple Interest Calculator")
 print("4. GST Calculator")
+print("5. Future Value")
+print("6. Cummulative Annual Growth Rate")
 a = input("Enter your choice: ")
 
 # compound interest calculator
@@ -65,4 +67,32 @@ elif a == "4":
     print('Your Total GST Amount is', total_amount)
 
 elif a == "5":
-    pass
+    print("1. Future Value using Simple Interest")
+    print("2. Future Value using Compound Interest")
+    pv = int(input("Enter Present Value: "))
+    r = int(input("Enter Rate of Interest: "))
+    t = int(input("Enter time period in years: "))
+    choice = input("Enter your choice: ")
+    if choice == "1":
+        # F.V. = P.V. (1 + (R x T))
+        fv = pv * (1 + (r * t))
+        print(fv)
+    elif choice == "2":
+        # F.V. = P.V. (1 + r)**t
+        fv = pv * ((1 + r)**t)
+        print(fv)
+    else:
+        print("You have entered incorrect choice.")
+    
+elif a == "6":
+    fv = int(input("Enter future value: "))
+    pv = int(input("Enter present value: "))
+    n = int(input("Number of periods: "))
+    '''
+    r = (FV/PV)**(1/n)-1
+    '''
+    r = ((fv/pv)**(1/n)) - 1
+    print("Your CAGR is", r)
+
+else:
+    print("Coming Soon.")
