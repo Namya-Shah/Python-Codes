@@ -11,10 +11,7 @@ def account_info():
         password = info[1]
     return email, password
 
-try:
     email, password = account_info()
-except FileNotFoundError:
-    print("File Not Found")
 
 tweet = "lmao, this is my tweet"
 
