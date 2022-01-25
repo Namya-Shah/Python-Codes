@@ -1,13 +1,11 @@
 import discord
 from discord.ext import commands
-from discord.ext.commands.core import Command
-from discord.ext.commands.errors import CommandInvokeError
- 
-bot = commands.Bot(command_prefix= "!")
- 
+
+bot = commands.Bot(command_prefix = "!")
+
 class Battleships(commands.Cog):
     
-    def __init__(self,bot):
+    def __init__(self, bot):
         self.bot = bot
         self.playing = False
         self.board1 = ""
@@ -15,9 +13,8 @@ class Battleships(commands.Cog):
         self.boardtoshow1 = ""
         self.boardtoshow2 = ""
         self.turn = ""
- 
-    async def render(self,ctx,board):
- 
+        
+    async def render(self, ctx, board):
         numbers = [":one:",":two:",":three:",":four:",":five:",":six:",":seven:",":eight:",":nine:",":ten:"]
  
         alphabets = [":regional_indicator_a:",":regional_indicator_b:",":regional_indicator_c:",":regional_indicator_d:",":regional_indicator_e:",":regional_indicator_f:",":regional_indicator_g:",
@@ -164,4 +161,4 @@ class Battleships(commands.Cog):
  
 bot.add_cog(Battleships(bot))
 
-bot.run("OTM1MDI2ODQ5OTU5MDE0NDcx.Ye4pnA.ju77dc_WeA5jYdE8tR8ufdj-j9A")
+bot.run("TOKEN")

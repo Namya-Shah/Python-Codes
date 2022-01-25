@@ -76,4 +76,4 @@ class MyPoll(commands.Cog):
             
  
 bot.add_cog(MyPoll(bot))
-bot.run("OTM1MDI2ODQ5OTU5MDE0NDcx.Ye4pnA.ju77dc_WeA5jYdE8tR8ufdj-j9A")
+bot.run("TOKEN")

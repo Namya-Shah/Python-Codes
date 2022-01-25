@@ -1,4 +1,3 @@
-from aiohttp import client
 from discord.ext import commands
 import discord, youtube_dl, os, asyncio
 bot = commands.Bot(command_prefix = "!")
@@ -8,16 +7,11 @@ filestodelete = []
 @bot.command()
 @commands.has_role("DJ")
 async def join(ctx):
-    user = ctx.message.author
-    vc = user.voice.channel
-
-    voice = discord.utils.get(client.voice_clients, guild=ctx.guild) # This allows for more functionality with voice channels
-
-    if voice == None: # None being the default value if the bot isnt in a channel (which is why the is_connected() is returning errors)
-        await vc.connect()
-        await ctx.send(f"Joined **{vc}**")
+    channel = ctx.author.voice.channel
+    if ctx.voice_client is not None:
+        await ctx.voice_client.move_to(channel)
     else:
-        await ctx.send("I'm already connected!")
+        await channel.connect()
  
 @bot.command()
 @commands.has_role("DJ")
@@ -160,4 +154,4 @@ async def errorhandler(ctx, error):
     if isinstance(error, commands.errors.MissingRole):
         await ctx.send("You have to have the DJ Role to use this bot.")
  
-bot.run("OTM1MDI2ODQ5OTU5MDE0NDcx.Ye4pnA.ju77dc_WeA5jYdE8tR8ufdj-j9A")
+bot.run("TOKEN")
