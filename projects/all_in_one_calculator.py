@@ -23,7 +23,18 @@ print("20. Ohm's Law")
 print("21. Cummulative Annual Growth Rate")
 print("22. Quadratic Equation Solver")
 print("23. x^y calculator")
-choice = input("What do you want to use (1/23)? ")
+print("24. Pythagoreas Theorem")
+print("25. Net Income Formula")
+print("26. Accounting Equation")
+print("27. Cost of goods sold formula")
+print("28. Break-even point formula")
+print("29. Return on Investment")
+print("30. Profit Margin")
+print("31. Current Ratio")
+print("32. Markup Percentage")
+print("33. Inventory Shrinkage Formula")
+
+choice = input("What do you want to use (1/33)? ")
 
 # 1. Calculator
 if choice == '1':
@@ -598,12 +609,13 @@ elif choice == '22':
     sol2 = (-b+cmath.sqrt(d))/(2*a)
     print('The solution are {0} and {1}'.format(sol1,sol2))
 
-# x^y calculator
+# 23. x^y calculator
 elif choice == '23':
     x = int(input("Enter a number: "))
     y = int(input("Enter power: "))
     print("{} to the power of {}".format(x,y),"is",pow(x,y))
 
+# 24. Pythagoreas Theorem
 elif choice == '24':
     print("Which side you wish to find: ")
     print("1. Hypotenuse")
@@ -627,6 +639,120 @@ elif choice == '24':
         print("Length of perpendicular height", z)
     else:
         print("You have entered a incorrect choice")
+
+# 25. Net Income Formula
+elif choice == '25':
+    x = float(input("Enter your Revenue: "))
+    y = float(input("Enter your Expenses: "))
+    
+    # NET INCOME FORMULA  = REVENUE - EXPENSES
+    z = x - y
+    print("Your net income is", z)
+
+# 26. Accounting Equation
+elif choice == '26':
+    print("1. Assets")
+    print("2. Liabilities")
+    print("3. Equity")
+    a = input("Enter your choice: ")
+    if a == '1':
+        # ASSETS = LIABILITIES + EQUITY
+        x = int(input("Enter your liabilities: "))
+        y = int(input("Enter your equity: "))
+        z = x + y
+        print("Your Assets are", z)
+    
+    elif a == '2':
+        # LIABILITIES = ASSETS - EQUITY
+        x = int(input("Enter your assets: "))
+        y = int(input("Enter your equity: "))
+        z = x - y
+        print("Your Liabilities are", z)
+    
+    elif a == '3':
+        # EQUITY = ASSETS - LIABILITIES
+        x = int(input("Enter your liabilities: "))
+        y = int(input("Enter your assets: "))
+        z = y - x
+        print("Your Equity is", z)
+
+# 27. Cost of goods sold formula
+elif choice == '27':
+    # COGS = BEGINNING INVENTORY + PURCHASES DURING THE PERIOD - ENDING INVENTORY
+    x = float(input("Enter your Beginning Inventory: "))
+    y = float(input("Enter your Purchases during the period: "))
+    z = float(input("Enter your Ending Inventory: "))
+    a = x + y - z
+    print("Your Cost of Goods Sold are:", a)
+
+# 28. Break-even point formula
+elif choice == '28':
+    # BREAK-EVEN POINT = FIXED COSTS / (SALES PRICE PER UNIT - VARIABLE COSTS PER UNIT)
+    x = float(input("What are your Fixed Costs? "))
+    y = float(input("What is your Sales Price? "))
+    z = float(input("What are your Variable Costs Per Unit? "))
+    a = x / (y - z)
+    print("Your Break-Even Point is", a)
+
+# 29. Return on Investment
+elif choice == '29':
+    x = float(input("Enter your Investment Gain: "))
+    y = float(input("Enter your Cost of Investment: "))
+    # ROI = [(INVESTMENT GAIN - COST OF INVESTMENT) / COST OF INVESTMENT] * 100
+    z = ((x-y)/y) * 100
+    print("Your Return of Investment (ROI) is", z)
+
+# 30. Profit Margin
+elif choice == '30':
+    x = int(input("Enter your Net Income: "))
+    y = int(input("Enter your Revenue: "))
+    # PROFIT MARGIN = (NET INCOME / REVENUE) * 100
+    z = (x/y)*100
+    print("Your Profit Margin is", z)
+
+# 31. Current Ratio
+elif choice == '31':
+    x = int(input("Enter your Current Assets: "))
+    y = int(input("Enter your Current Liabilities: "))
+    # CURRENT RATIO = CURRENT ASSETS / CURRENT LIABILITIES
+    z = x/y
+    print("Your Current Margin is", z)
+
+# 32. Markup Percentage
+elif choice == '32':
+    x = int(input("Enter your Revenue: "))
+    y = int(input("Enter your Costs of Good Sold (COGS): "))
+    # MARKUP PERCENTAGE = [(REVENUE - COGS) / COGS]*100
+    z = ((x - y)/y)*100
+    print("Your Markup Percentage is", z)
+
+# 33. Inventory Shrinkage Formula
+elif choice == '33':
+    x = int(input("Enter your Recorded Inventory: "))
+    y = int(input("Enter your Actual Inventory: "))
+    # INVENTORY SHRINKAGE = [(RECORDED INVENTORY - ACTUAL INVENTORY) / RECORDED INVENTORY] * 100
+    z = ((x-y)/x)*100
+    print("Your Inventory Shrinkage is", z)
+
+# 34. EBIDTA Formula
+elif choice == '34':
+    print("1. Using Net Income")
+    print("2. Using Operating Profit")
+    option = input("Enter your choice: ")
+    if option == '1':
+        x = int(input("Enter your Net Income: "))
+        y = int(input("Enter your Interest: "))
+        z = int(input("Enter your Taxes: "))
+        depreciation = int(input("Enter Depreciation Amount: "))
+        amortization = int(input("Enter Amortization Amount: "))
+        a = x + y + z + depreciation + amortization
+        print("Your EBIDTA is", a)
+    elif option == '2':
+        x = int(input("Enter your Operating Profit: "))
+        depreciation = int(input("Enter Depreciation Amount: "))
+        amortization = int(input("Enter Amortization Amount: "))
+        a = x + depreciation + amortization
+        print("Your EBIDTA is", a)
 
 else:
     print("You have entered incorrect choice.")
