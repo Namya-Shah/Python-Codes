@@ -33,8 +33,9 @@ print("30. Profit Margin")
 print("31. Current Ratio")
 print("32. Markup Percentage")
 print("33. Inventory Shrinkage Formula")
+print("34. EBIDTA Calculator")
 
-choice = input("What do you want to use (1/33)? ")
+choice = input("What do you want to use (1/34)? ")
 
 # 1. Calculator
 if choice == '1':
