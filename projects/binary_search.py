@@ -34,6 +34,6 @@ def binary_search(l, target, low=None, high=None):
     
 if __name__ == '__main__':
     l = [1, 3, 10, 12]
-    target = 3
+    target = 10
     print(naive_search(l, target))
     print(binary_search(l, target))
