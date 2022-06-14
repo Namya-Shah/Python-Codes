@@ -1,10 +1,19 @@
-import numpy as np
+exp = -1
+total = 0
+maxexp = 0
+minexp = 0
 
-A = np.array([5,21,23,6,32,31])
-B = [2,4,6,8]
-B.append(10)
-B.pop(2)
-A + 5
+while exp != 0:
+    exp = int(input("What's the expense? (Press 0 to stop it)"))
+    total = total + exp
+    if exp>maxexp:
+        maxexp = exp
+    if exp<minexp:
+        minexp = exp
 
-print(A)
-print(B)
+e = list(str(exp))
+print(e)
+
+print("Your total expenditure is ", str(total))
+print("Your maximum expenditure is", str(maxexp))
+print("Your minimum expenditure is", str(minexp))
