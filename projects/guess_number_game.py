@@ -1,7 +1,6 @@
 # USER HAVE TO MAKE THE GUESS!!!
 
 import random
-from re import I
 number = random.randrange(1,100)
 guess = int(input("Guess a number between 1 and 100: "))
 
