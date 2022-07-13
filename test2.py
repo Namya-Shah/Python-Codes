@@ -1,9 +1,5 @@
-a = [
-    "one",
-    "two",
-    "three",
-    "four",
-    "five"
-]
+name = input("Enter name: ")
 
-print(len(a))
+name = name.title()
+
+print("Hello", name)
